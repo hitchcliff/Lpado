@@ -44,11 +44,11 @@ const Nav = () => {
     return (
         <div ref={e=>container=e} className={styles.container}>
             <div className={styles.menu}>
-                <h6 className={styles.menu__logo}><Link to="/">Lpado</Link></h6>
+                <h6 className={styles.menu__logo}><Link to="https://hitchcliff.github.io/Lpado/">Lpado</Link></h6>
                 <ul ref={e=>menu=e} className={state ? styles.menu__items : cx(styles.menu__hidden)}>
                 <button onClick={toggleChange} className={styles.menu__close}><FontAwesomeIcon icon={faTimes}/></button>
                     <li>
-                        <NavLink exact to="/" activeClassName={styles.active}>Home</NavLink>
+                        <NavLink exact to="https://hitchcliff.github.io/Lpado/" activeClassName={styles.active}>Home</NavLink>
                     </li>
                     <li>
                         <NavLink to="/pages" activeClassName={styles.active}>Pages</NavLink>
