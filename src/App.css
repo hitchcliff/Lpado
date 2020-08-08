@@ -1,38 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  --primary: #FCCA22;
+  --secondary: #E7E8EC;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
 .App {
-  text-align: center;
+  height: 100%;
+  overflow: hidden;
+  visibility: visible;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Generic
+================= */
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-weight: 600;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+button:visited,
+button:focus {
+  outline: none;
+}
+
+span {
+  color: var(--primary);
+}
+
+/* Slick active
+================= */
+
+.slick-active button::after {
+  background-color: var(--primary) !important;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+/* Footer
+================= */
+
+footer {
+  width: 100%;
+  padding: 20px 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+footer h6 {
+  margin-right: 50px;
+  font-weight: 300;
+  text-transform: capitalize;
+  font-size: .9rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer svg {
+  opacity: .5;
+}
+
+@media(max-width: 800px) {
+  footer svg {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media(max-width: 640px) {
+  footer {
+    padding: 20px 30px;
+    margin: 20px;
+    justify-content: center;
+  }
+}
+
+@media(max-width: 510px) {
+  footer {
+    width: 100%;
+    justify-content: center;
+    margin: 20px;
   }
 }

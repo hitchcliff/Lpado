@@ -1,0 +1,160 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+    z-index: 10;
+    background-color: white;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo
+================= */
+h6.menu__logo,
+h6.menu__logo:visited,
+h6.menu__logo:active{ 
+    font-size: 1.4rem;
+    color: black !important;
+}
+
+h6.menu__logo:hover a {
+    color: var(--primary);
+}
+
+
+/* MENU ITEMS
+================= */
+.menu__items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 100px;
+}
+
+.menu__items li {
+    margin: 0 20px;
+}
+
+.menu__items a {
+    color: black;
+    opacity: .5;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+/* Social Icons
+================= */
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.social a {
+    margin: 0 10px;
+    color: black;
+}
+
+.social a > svg {
+    font-size: 1.2rem;
+}
+
+.social a:hover svg {
+    color: var(--primary);
+}
+
+/* ACTIVE
+================= */
+.menu__items li > a.active {
+    opacity: 1;
+    position: relative;
+    transition: all .2s ease;
+}
+
+.menu__items li > a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background-color: var(--primary);
+    width: 100%;
+    height: 2px;
+}
+
+/* Media
+================= */
+
+.menu__bars {
+    display: none;
+}
+
+@media (max-width: 1040px) {
+    .menu__items {
+        margin: 0 30px;
+    }
+}
+
+@media (max-width: 910px) {
+    .menu__items {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        background-color: var(--primary);
+        margin: 0;
+        height: 100%;
+        width: 100vw;
+        flex-direction: column;
+        opacity: 1;
+        z-index: 9;
+        transition: all .5s ease;
+    }
+
+    .menu__hidden {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        z-index: -9;
+    }
+
+    .menu__bars {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0 30px;
+        margin-top: 2px;
+    }
+
+    .menu__close {
+        font-size: 1.2rem;
+        color: white;
+        position: absolute;
+        top: 30px;
+        right: 50px;
+    }
+}
+
+@media (min-width: 911px) {
+    .menu__hidden {
+        display: none;
+    }
+    .menu__close {
+        display: none;
+    }
+}
+
+@media(max-width: 640px) {
+    .container {
+        padding: 20px 30px;
+    }
+
+    .social a {
+        margin: 0 2px;
+    }
+}

@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useRef, useEffect } from 'react';
 import './App.css';
+import './media.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+
+import {Nav, Home} from './components'
+
+import {Cube} from 'react-preloaders';
+import {TweenMax} from 'gsap'
 function App() {
+  let app = useRef(null)
+  // useEffect(() => {
+  //   TweenMax.to(app, 1, {css: {visibility: 'visible'}})
+  // }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div ref={e=>app=e} className="App">
+      <Cube color="#FCCA22" animation="slide-left"/>
+      <Router>
+        <Nav></Nav>
+        <Switch>
+          <Route path={["/", "/home"]} component={Home}></Route>
+        </Switch>
+        <footer>
+          <h6>make your brand more clever</h6>
+          <FontAwesomeIcon icon={faArrowRight}/>
+        </footer>
+      </Router>
+      
     </div>
   );
 }

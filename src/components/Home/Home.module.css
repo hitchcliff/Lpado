@@ -1,0 +1,222 @@
+.container {
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+    z-index: 0;
+    position: relative;
+}
+
+/* Details Slide
+================= */
+
+.slideList {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideDots {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 30px;
+    
+}
+.slideDots li button {
+    position: relative;
+    cursor: pointer;
+}
+
+.slideDots li button::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+}
+
+
+/* Contents
+================= */
+.details {
+    z-index: 0;
+    padding-left: 150px;
+}
+
+.details:visited,
+.details:focus {
+    outline: none;
+}
+
+.details__subheading {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: .8rem;
+    margin-bottom: 15px;
+}
+
+.details__heading {
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 3.5rem;
+}
+
+.details__button {
+    border: 2px solid gray;
+    color: gray;
+    font-weight: 300;
+    padding: 10px 50px;
+    margin-top: 30px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+.details__button:hover {
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    color: white;
+}
+
+/* Image
+================= */
+.slider {
+    position: absolute;
+    width: 40%;
+    right: 100px;
+    z-index: 1;
+    height: 100%;
+    z-index: 20;
+}
+
+/* Image Hover Effect
+================= */
+
+.slider .img {
+    height: 100vh;
+    width: 100%;
+}
+
+.slider canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.slider:after {
+    content: url('../../assets/right.svg');
+    width: 15px;
+    height: 30px;
+    position: absolute;
+    bottom: -20px;
+    left: 0px;
+    z-index: 10;
+    background-color: var(--primary);
+    padding: 3px 10px;
+}
+
+.slider:before {
+    content: url('../../assets/left.svg');
+    width: 15px;
+    height: 30px;
+    position: absolute;
+    bottom: -20px;
+    left: -35px;
+    z-index: 10;
+    background-color: black;
+    padding: 3px 10px;
+}
+
+/* Media
+================= */
+@media (max-width: 1111px) {
+    .details__heading {
+        font-size: 2rem;
+    }
+    .slider {
+        right: 0;
+    }
+}
+
+@media (max-width: 911px) {
+    .details {
+        padding-left: 100px;
+    }
+
+    
+
+}
+
+@media (max-width: 800px) {
+    .details__heading {
+        font-size: 1.5rem;    
+    }
+
+    .slider {
+        width: 45%;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        flex-direction: column;
+        height: 100%;
+    }
+    .slider {
+        display: block;
+    }
+
+    .slideList {
+        width: 100%;
+        height: 100vh;
+        display: flex !important;
+        padding-left: 40px;
+    }
+
+    .details__button {
+        padding: 10px 20px;
+    }
+
+    .details {
+        padding-left: 0;
+        width: 100%;
+    }
+    .slideDots {
+        top: 50px;
+        left: 40px;
+    }
+}
+
+@media (max-width: 300px) {
+    .slideList {
+        padding: 10px;
+    }
+
+    .details__subheading {
+        font-size: .6rem;
+    }
+
+
+    .details__heading {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .details__button {
+        padding: 5px 10px;
+    }
+
+    .slideDots {
+        top: 50px;
+        left: 20px;
+    }
+}
