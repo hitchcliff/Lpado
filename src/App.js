@@ -21,7 +21,7 @@ function App() {
       <Router>
         <Nav></Nav>
         <Switch>
-          <Route path={["/", "/home"]} component={Home}></Route>
+          <Route exact path={["/", "/home", "/lpado"]} component={Home}></Route>
         </Switch>
         <footer>
           <h6>make your brand more clever</h6>
