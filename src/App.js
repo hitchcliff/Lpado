@@ -8,16 +8,24 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 import {Nav, Home} from './components'
 
-import {Cube} from 'react-preloaders';
-import {TweenMax} from 'gsap'
+import {TweenMax, TimelineLite, Expo} from 'gsap'
 function App() {
   let app = useRef(null)
-  // useEffect(() => {
-  //   TweenMax.to(app, 1, {css: {visibility: 'visible'}})
-  // }, [])
+  let overlay = useRef(null)
+  const tl = new TimelineLite();
+  useEffect(() => {
+    TweenMax.to(app, 1, {css: {visibility: 'visible'}});
+    console.log(overlay.children)
+    for(var i=0; i<overlay.children.length; i++) {
+      tl.to(overlay.children[i], 1, {
+        opacity: .5,
+        height: 0,
+        ease: Expo.easeOut
+      }, .5)
+    }
+  }, [])
   return (
     <div ref={e=>app=e} className="App">
-      <Cube color="#FCCA22" animation="slide-left"/>
       <Router>
         <Nav></Nav>
         <Switch>
@@ -28,7 +36,13 @@ function App() {
           <FontAwesomeIcon icon={faArrowRight}/>
         </footer>
       </Router>
-      
+      <div ref={e=>overlay=e} className="overlay">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 }

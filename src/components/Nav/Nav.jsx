@@ -20,16 +20,16 @@ const Nav = () => {
     const tl = new TimelineLite();
     
     useEffect(() => {
-        tl.from(container, 2, {
+        tl.from(container, 1, {
             x: -1000,
             ease: Expo.ease
         })
-        .from(menu, 1.5, {
+        .from(menu, 1, {
             y: -500,
             ease: Expo.ease
-        })
+        }, 1)
         for(let i=0; i<icons.children.length; i++) {
-            tl.from(icons.children[i], .5, {
+            tl.from(icons.children[i], .2, {
                 opacity: 0,
                 x: 500,
                 ease: Expo.ease

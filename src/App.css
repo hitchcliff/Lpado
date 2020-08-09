@@ -81,6 +81,28 @@ footer h6 {
 footer svg {
   opacity: .5;
 }
+/* Overlay
+================= */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 30;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.overlay div {
+  height: 100vh;
+  width: 20%;
+  background-color: var(--primary);
+}
+
+/* Media Queries
+================= */
 
 @media(max-width: 800px) {
   footer svg {
