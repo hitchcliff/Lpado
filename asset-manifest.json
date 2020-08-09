@@ -1,29 +1,24 @@
 {
   "files": {
-    "main.css": "/Lpado/static/css/main.8dbecda1.chunk.css",
-    "main.js": "/Lpado/static/js/main.c9d18531.chunk.js",
-    "main.js.map": "/Lpado/static/js/main.c9d18531.chunk.js.map",
-    "runtime-main.js": "/Lpado/static/js/runtime-main.2da14552.js",
-    "runtime-main.js.map": "/Lpado/static/js/runtime-main.2da14552.js.map",
-    "static/css/2.1f625a31.chunk.css": "/Lpado/static/css/2.1f625a31.chunk.css",
-    "static/js/2.cfd6cfac.chunk.js": "/Lpado/static/js/2.cfd6cfac.chunk.js",
-    "static/js/2.cfd6cfac.chunk.js.map": "/Lpado/static/js/2.cfd6cfac.chunk.js.map",
-    "index.html": "/Lpado/index.html",
-    "precache-manifest.61f5c0c9e5873f46b4611a57a2fab0d4.js": "/Lpado/precache-manifest.61f5c0c9e5873f46b4611a57a2fab0d4.js",
-    "service-worker.js": "/Lpado/service-worker.js",
-    "static/css/2.1f625a31.chunk.css.map": "/Lpado/static/css/2.1f625a31.chunk.css.map",
-    "static/css/main.8dbecda1.chunk.css.map": "/Lpado/static/css/main.8dbecda1.chunk.css.map",
-    "static/js/2.cfd6cfac.chunk.js.LICENSE.txt": "/Lpado/static/js/2.cfd6cfac.chunk.js.LICENSE.txt",
-    "static/media/Home.module.css": "/Lpado/static/media/right.a50bc4fa.svg",
-    "static/media/model1.png": "/Lpado/static/media/model1.b5fede89.png",
-    "static/media/model2.jpg": "/Lpado/static/media/model2.66e0a96c.jpg",
-    "static/media/slick-theme.css": "/Lpado/static/media/slick.f97e3bbf.svg"
+    "main.css": "/lpado/static/css/main.44aeb605.chunk.css",
+    "main.js": "/lpado/static/js/main.16a5e59f.chunk.js",
+    "main.js.map": "/lpado/static/js/main.16a5e59f.chunk.js.map",
+    "runtime-main.js": "/lpado/static/js/runtime-main.87457ba0.js",
+    "runtime-main.js.map": "/lpado/static/js/runtime-main.87457ba0.js.map",
+    "static/js/2.32656bf0.chunk.js": "/lpado/static/js/2.32656bf0.chunk.js",
+    "static/js/2.32656bf0.chunk.js.map": "/lpado/static/js/2.32656bf0.chunk.js.map",
+    "index.html": "/lpado/index.html",
+    "precache-manifest.d9dc45e06105221f46bea2513a4371ba.js": "/lpado/precache-manifest.d9dc45e06105221f46bea2513a4371ba.js",
+    "service-worker.js": "/lpado/service-worker.js",
+    "static/css/main.44aeb605.chunk.css.map": "/lpado/static/css/main.44aeb605.chunk.css.map",
+    "static/js/2.32656bf0.chunk.js.LICENSE.txt": "/lpado/static/js/2.32656bf0.chunk.js.LICENSE.txt",
+    "static/media/Home.module.css": "/lpado/static/media/right.a50bc4fa.svg",
+    "static/media/model1.png": "/lpado/static/media/model1.b5fede89.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2da14552.js",
-    "static/css/2.1f625a31.chunk.css",
-    "static/js/2.cfd6cfac.chunk.js",
-    "static/css/main.8dbecda1.chunk.css",
-    "static/js/main.c9d18531.chunk.js"
+    "static/js/runtime-main.87457ba0.js",
+    "static/js/2.32656bf0.chunk.js",
+    "static/css/main.44aeb605.chunk.css",
+    "static/js/main.16a5e59f.chunk.js"
   ]
 }
